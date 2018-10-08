@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<h2 style="position: relative; top: 50px; text-align: center;">Домашнее задание №1</h2>
+		<h3 style="position: relative; top: 50px; text-align: center;">Не забудьте заглянуть в консоль</h3>
+		<xmp style="position: relative; max-width: 400px; margin: auto; top: 50px; left: -250px;" class="javascript">
+
+				/* Задание №1 */
+				function  celsiusToFarengeight(celsius) {
+					return (9 / 5) * celsius + 32;
+				}
+
+				alert(`На улице ${celsiusToFarengeight(12)} градусов по Фарингейту!`);
+
+				/* Задание №2 */
+				let admin, name = 'Василий';
+
+				admin = name;
+				console.log(admin);
+
+				/* Задание №3 */
+				console.log(`1000 + '108' будут ${typeof (1000 + '108')} со значением ${1000 + '108'}`);
+
+				<!-- Задание №4 -->
+				<script async>
+					console.log('Async Выполняется параллельно с загрузкой DOM у браузера');
+				</script>
+				<script defer>
+					console.log('Defer Выполняется после загрузки DOM у браузера');
+				</script>
+		</xmp>
+
+		<script>
+			/* Задание №1 */
+			function  celsiusToFarengeight(celsius) {
+				return (9 / 5) * celsius + 32;
+			}
+			
+			alert(`На улице ${celsiusToFarengeight(12)} градусов по Фарингейту!`);
+		</script>
+		<script>
+			/* Задание №2 */
+			let admin, name = 'Василий';
+
+			admin = name;
+			console.log(admin);
+		</script>
+		<script>
+			/* Задание №3 */
+			console.log(`1000 + '108' будут ${typeof (1000 + '108')} со значением ${1000 + '108'}`);
+		</script>
+		<!-- Задание №4 -->
+		<script async="">
+			console.log('Async Выполняется параллельно с згарузкой DOM у браузера');
+		</script>
+		<script defer="">
+			console.log('Defer Выполняется после загрузки DOM у браузера');
+		</script>
+	</body>
+</html>
