@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="position: relative; top: 50px; text-align: center;">Домашнее задание №3</h2>
+<h3 style="position: relative; top: 50px; text-align: center;">Не забудьте заглянуть в консоль</h3>
+<script>
+
+/* Задание №1 */
+
+let iter1 = 0;
+while (iter1 !== 100) {
+    if (iter1 > 1) {
+        let i = 2;
+        let status = true;
+        while (i < iter1) {
+            if (iter1 % i === 0) {
+                status = false;
+                break;
+            }
+            i++;
+        }
+        if (status) {
+            console.log(iter1);
+        }
+    }
+    iter1++;
+}
+
+/* Задание №2 */
+
+let iter2 = 0;
+while (iter2 < 11) {
+    console.log(`${iter2} - ${iter2 === 0 ? 'это ноль' : iter2 % 2 === 0 ? 'четное' : 'нечетное'}`);
+    iter2++;
+}
+
+/* Задание №3 */
+
+for (let i = 0; i < 10; console.log(i++)) {}
+
+/* Задание №4 */
+
+for (let i = 1; i < 21; i++) {
+    let str = '';
+    for (let j = 0; j < i; j++) {
+        str += 'к';
+    }
+    console.log(str);
+}
+
+/* Задание №5 */
+
+let basket = [2000, 2999, 1700, 7000];
+
+function countBasketPrice(basket) {
+    let totalValue = 0;
+    if (basket) {
+        basket.forEach(item => {
+            totalValue += item;
+        });
+    }
+
+    return totalValue;
+}
+
+console.log(countBasketPrice(basket) + ' руб'); // 13699 руб
+
+</script>
+</body>
+</html>

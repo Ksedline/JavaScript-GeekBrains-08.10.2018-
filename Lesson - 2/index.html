@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="position: relative; top: 50px; text-align: center;">Домашнее задание №2</h2>
+<h3 style="position: relative; top: 50px; text-align: center;">Не забудьте заглянуть в консоль</h3>
+<script>
+    /* Задание 1 */
+    // let a = 1, b = 1, c, d;
+    // c = ++a; alert(c); // 2, потому что ++ перед а - означает значение после инкремента, с возвращением нового значения (а - стало 2)
+    // d = b++; alert(d); // 1, а здесь 1 - потому что значение b до инкремента, и b++ вернет старое значение
+    // c = (2+ ++a); alert(c); // 5, здесь сумма 2 и 2+1, после инкремента
+    // d = (2+ b++); alert(d); // 4, здесь сумма 2 и 2 до инкремента, но при этом b увеличится на 1
+    // alert(a); // 3, это полученное значение после воздействий инкремента (++a)
+    // alert(b); // 3, это полученное значение после воздействий инкремента (++b)
+
+    /* Задание 2 */
+    // let a = 2;
+    // let x = 1 + (a *= 2); // - станет 5, т.к. а *= 2 в этом случае сделает а равным 4
+
+    function randInt(min, max) {
+        return Math.round(min - 0.5 + Math.random() * (max - min + 1));
+    }
+
+    /* Задание 3 */
+
+    let a = randInt(-5, 5);
+    let b = randInt(-5, 5);
+
+    console.log('a =', a, 'b =', b);
+    if (a >= 0 && b >= 0) { // Так как ноль можно считать положительным числом
+        console.log('Разность a и b:', a - b);
+    } else if (a < 0 && b < 0) {
+        console.log('Произведение a и b:', a * b);
+    } else {
+        console.log('Сумма a и b:', a + b);
+    }
+
+    /* Задание 4 */
+
+    let aa = randInt(0, 15); // так как а уже было
+
+    console.log('aa =', aa);
+    switch (aa) {
+        case 0: console.log(1);
+        case 1: console.log(2);
+        case 2: console.log(3);
+        case 3: console.log(4);
+        case 4: console.log(5);
+        case 5: console.log(6);
+        case 6: console.log(7);
+        case 7: console.log(8);
+        case 8: console.log(9);
+        case 9: console.log(10);
+        case 10: console.log(11);
+        case 11: console.log(12);
+        case 12: console.log(13);
+        case 13: console.log(14);
+        case 14: console.log(15); break;
+        default: console.log(15); break;
+    }
+
+    /* Задание 5 */
+    
+    function addition(a, b) {
+        return a + b;
+    }
+
+    function subtraction(a, b) {
+        return a - b;
+    }
+
+    function multiplication(a, b) {
+        return a * b;
+    }
+
+    function division(a, b) {
+        return a / b;
+    }
+
+    /* Задание 6 */
+
+    function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+            case 'addition': return addition(arg1, arg2);
+            case 'subtraction': return subtraction(arg1, arg2);
+            case 'multiplication': return multiplication(arg1, arg2);
+            case 'division': return division(arg1, arg2);
+            default: return ('Такой функции нет в списке');
+        }
+    }
+
+    let c = randInt(1, 5);
+    let d = randInt(1, 5);
+
+    console.log('c =', c, 'd=', d);
+    console.log('Сложение:', mathOperation(c, d, 'addition'));
+    console.log('Вычетание:', mathOperation(c, d, 'subtraction'));
+    console.log('Умножение:', mathOperation(c, d, 'multiplication'));
+    console.log('Деление:', mathOperation(c, d, 'division'));
+
+    /* Задание 7 */
+    console.log(null == 0); // false - это значение по умолчанию, оно возвращается так как null - это пустое значение, как у undefined, а 0 - это определенное значение
+    
+    function power(val, pow) {
+        if (pow !== 1) {
+            return val * power(val, pow - 1);
+        } else {
+            return val;
+        }
+    }
+
+    console.log('Возведение в степень 2, 4', power(2, 4));
+
+</script>
+</body>
+</html>
