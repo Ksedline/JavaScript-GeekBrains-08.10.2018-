@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Корзина</title>
+    <style>
+        #logo {
+            display: block;
+            width: 100px;
+            float: left;
+        }
+
+        .bread-crumbs {
+            margin: 10px 0;
+            max-width: 600px;
+        }
+
+        .bread-crumbs .col {
+            padding-left: 0;
+        }
+
+        .goods .row .col {
+            max-width: 400px;
+            max-height: 600px;
+            margin: 10px;
+            border: 1px solid lightblue;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <header>
+        <a href="#"><img id="logo" src="http://www.logologo.com/logos/letter-a-logo.jpg" alt="Logo"></a>
+        <h2>&nbsp;Корзина</h2>
+    </header>
+    <hr>
+    <div class="shopping-cart">
+        <i></i>
+        <span><span id="shopping-amount">0</span> товаров. <span id="shopping-cost">0.00</span> р.</span>
+    </div>
+    <div class="bread-crumbs row">
+        <div class="col">
+            <span>Все (<span id="category-all">0</span>)</span>
+            <hr style="border-top: 1px solid red;">
+        </div>
+        <div class="col">
+            <span>MacPro (<span id="category-macpro">0</span>)</span>
+            <hr>
+        </div>
+        <div class="col">
+            <span>Ipad (<span id="category-ipad">0</span>)</span>
+            <hr>
+        </div>
+        <div class="col">
+            <span>Phone (<span id="category-phone">0</span>)</span>
+            <hr>
+        </div>
+    </div>
+    <div class="goods">
+        <div class="row">
+            <div class="col" id="good1">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img1">
+                <h2>55" Apple LCD TV</h2>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cupiditate nam reprehenderit
+                    voluptatibus unde et dolore sunt voluptate, ab impedit harum temporibus, quae adipisci a libero
+                    enim voluptas placeat iusto!</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good2">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img2">
+                <h2>Apple iPad</h2>
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus laboriosam nostrum facere
+                    voluptate impedit explicabo tempora ipsam dolor? Ipsa quibusdam et mollitia, debitis libero
+                    deserunt voluptatem itaque ullam praesentium facere.</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good3">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img3">
+                <h2>MacBookPro</h2>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quam provident est sed vero velit
+                    enim, aliquid incidunt, placeat minus error. Dolore maxime doloribus facere, similique ratione
+                    alias numquam aperiam.</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good4">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img4">
+                <h2>MacBookPro</h2>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa obcaecati quod rerum dolorem
+                    facilis, repudiandae accusantium perspiciatis sint asperiores iure cumque praesentium aliquid aut!
+                    Distinctio at veniam accusamus ab neque!</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good5">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img5">
+                <h2>MacBook Airs</h2>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eaque velit praesentium eos quas
+                    voluptates accusamus cumque et, nemo accusantium nam, blanditiis beatae tempore amet quaerat!
+                    Mollitia, eum doloremque? Veniam.</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good6">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img6">
+                <h2>Front office Manager</h2>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio architecto, ab iure voluptatum in
+                    eaque veniam quod quisquam vitae, voluptates doloribus quis. Necessitatibus, velit? Esse corporis
+                    corrupti dicta veniam. Doloremque!</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good7">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img7">
+                <h2>interaction Designer</h2>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ducimus nam ad! Placeat odit quas
+                    hic at dolorem id. Rerum, unde voluptates vitae deleniti quaerat quia accusantium repellendus
+                    alias! Incidunt.</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good8">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img8">
+                <h2>Marketing Manager</h2>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium non ratione hic
+                    consequuntur ab nobis, velit ut saepe, nesciunt minima dolorem quae neque, odio impedit provident
+                    odit! Laborum, maxime eligendi?</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+            <div class="col" id="good9">
+                <img src="https://picsum.photos/300/300/?random" alt="#" id="good-img9">
+                <h2>Account Manager</h2>
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat doloremque cum laboriosam.
+                    Minus quaerat quisquam quae maxime obcaecati provident. Eveniet veniam unde ipsam perspiciatis.
+                    Dolorum repudiandae debitis vitae quidem sit!</span>
+                <div class="row"><button class="col">В корзину</button><button class="col">Подробности</button></div>
+                <hr>
+                <p class="good-money">₽ 5.99</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<h2 style="position: relative; top: 50px; text-align: center;">Домашнее задание №4</h2>
+	<h3 style="position: relative; top: 50px; text-align: center;">Не забудьте заглянуть в консоль</h3>
+    <script>
+	
+        /* Задание №1 */
+		
+        function numberToObject(num) {
+            let obj = {};
+            num = Math.abs(num);
+
+            if (num !== 0 && num < 1000) {
+                num = num.toString();
+                switch (num.length) {
+                    case 1:
+                        obj['units'] = parseInt(num);
+                        break;
+                    case 2:
+                        obj['tenners'] = parseInt(num[0]);
+                        obj['units'] = parseInt(num[1]);
+                        break;
+                    case 3:
+                        obj['hundreds'] = parseInt(num[0]);
+                        obj['tenners'] = parseInt(num[1]);
+                        obj['units'] = parseInt(num[2]);
+                        break;
+                }
+            } else {
+                console.log('Число больше 999');
+            }
+            return obj;
+        }
+        console.log(numberToObject(117));
+
+        /* Задание №2 */
+
+        let basket = {
+            valute: 'руб.',
+            owner: {
+                name: 'Vasiliy',
+                surname: 'Poopkin',
+            },
+            goods: [{
+                    label: 'Название товара 1',
+                    cost: Math.round(Math.random() * 2000),
+                    articul: Math.random() * 1000,
+                    type: 'Бытовая электроника',
+                },
+                {
+                    label: 'Название товара 2',
+                    cost: Math.round(Math.random() * 2000),
+                    articul: Math.random() * 1000,
+                    type: 'Бытовая электроника',
+                },
+                {
+                    label: 'Название товара 3',
+                    cost: Math.round(Math.random() * 2000),
+                    articul: Math.random() * 1000,
+                    type: 'Бытовая электроника',
+                },
+                {
+                    label: 'Название товара 4',
+                    cost: Math.round(Math.random() * 2000),
+                    articul: Math.random() * 1000,
+                    type: 'Бытовая электроника',
+                },
+                {
+                    label: 'Название товара 5',
+                    cost: Math.round(Math.random() * 2000),
+                    articul: Math.random() * 1000,
+                    type: 'Бытовая электроника',
+                },
+            ]
+        };
+
+        function countBasketPrice(basket) {
+            let value = 0;
+            if (basket.goods) {
+                basket.goods.forEach(item => {
+                    value += item.cost;
+                });
+            }
+            basket['totalCost'] = value;
+            return basket;
+        }
+        basket = countBasketPrice(basket);
+        console.log(`Корзина ${basket.owner.name} ${basket.owner.surname}, товаров на сумму: ${basket.totalCost} ${basket.valute}`);
+    </script>
+</body>
+
+</html>
