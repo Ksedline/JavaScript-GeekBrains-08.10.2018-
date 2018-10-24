@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chess</title>
+    <style>
+        .chess {
+            max-width: 600px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            /*grid-gap: 1px;*/
+        }
+
+        .cell {
+            width: 80px;
+            height: 80px;
+            border: 1px solid black;
+        }
+
+        .white {
+            background: #e3b28d;
+        }
+
+        .black {
+            background: #5e2f0d;
+        }
+        
+        .cell h2 {
+            text-align: center;
+            position: relative;
+            top: -15px;
+            font-size: 28px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function numToKey(num) {
+                switch (num) {
+                    case 1:
+                        return 'a';
+                    case 2:
+                        return 'b';
+                    case 3:
+                        return 'c';
+                    case 4:
+                        return 'd';
+                    case 5:
+                        return 'e';
+                    case 6:
+                        return 'f';
+                    case 7:
+                        return 'g';
+                    case 8:
+                        return 'h';
+                    default:
+                        return 'Err, use num 1 - 8!';
+                }
+            }
+
+            function generateField() {
+                let $field = '';
+                let counter = 0;
+
+                for (let i = 1; i < 9; i++) {
+                    for (let j = 1; j < 9; j++) {
+                        const address = numToKey(j) + i;
+                        counter++;
+
+                        if (i % 2 === 0) {
+                            $field += `<div id="cell${counter}" class="cell ${j % 2 === 0 ? 'white' : 'black'} ${address}"><span>${address}</span><h2></h2></div>`;
+                        } else {
+                            $field += `<div id="cell${counter}" class="cell ${j % 2 === 0 ? 'black' : 'white'} ${address}"><span>${address}</span><h2></h2></div>`;
+                        }
+                    }
+                }
+
+                return $field;
+            }
+            const $app = document.getElementById('app');
+
+            $app.innerHTML = `<div class="chess">${generateField()}</div>`;
+            
+            for (let i = 9; i < 17; i++) {
+                document.getElementById('cell' + i).children[1].textContent = '♟';
+            }
+            
+            for (let i = 49; i < 57; i++) {
+                document.getElementById('cell' + i).children[1].textContent = '♟';
+                document.getElementById('cell' + i).children[1].style.color = 'white';
+            }
+
+            /* Черные */
+            document.getElementById('cell1').children[1].textContent = '♜';
+            document.getElementById('cell8').children[1].textContent = '♜';
+
+            document.getElementById('cell2').children[1].textContent = '♞';
+            document.getElementById('cell7').children[1].textContent = '♞';
+
+            document.getElementById('cell3').children[1].textContent = '♝';
+            document.getElementById('cell6').children[1].textContent = '♝';
+
+            document.getElementById('cell4').children[1].textContent = '♚';
+            document.getElementById('cell5').children[1].textContent = '♛';
+            
+            /* Белые */
+            document.getElementById('cell57').children[1].textContent = '♜';
+            document.getElementById('cell64').children[1].textContent = '♜';
+            
+            document.getElementById('cell58').children[1].textContent = '♞';
+            document.getElementById('cell63').children[1].textContent = '♞';
+
+            document.getElementById('cell59').children[1].textContent = '♝';
+            document.getElementById('cell62').children[1].textContent = '♝';
+
+            document.getElementById('cell60').children[1].textContent = '♚';
+            document.getElementById('cell61').children[1].textContent = '♛';
+
+            document.getElementById('cell57').children[1].style.color = 'white';
+            document.getElementById('cell64').children[1].style.color = 'white';
+            document.getElementById('cell58').children[1].style.color = 'white';
+            document.getElementById('cell63').children[1].style.color = 'white';
+            document.getElementById('cell59').children[1].style.color = 'white';
+            document.getElementById('cell62').children[1].style.color = 'white';
+            document.getElementById('cell60').children[1].style.color = 'white';
+            document.getElementById('cell61').children[1].style.color = 'white';
+
+        });
+    </script>
+</body>
+
+</html>
