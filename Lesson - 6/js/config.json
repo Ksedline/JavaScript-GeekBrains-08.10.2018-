@@ -1,0 +1,10 @@
+{
+  "images": [
+    "assets/img/cat1.jpg",
+    "assets/img/cat2.jpg",
+    "assets/img/cat3.jpg",
+    "assets/img/cat4.jpg",
+    "assets/img/cat5.png"
+  ],
+  "delay": 3000
+}
